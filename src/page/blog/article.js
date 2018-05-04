@@ -37,7 +37,7 @@ class ArticlePage extends React.Component {
     Actions.getIssues(data).then((res) => {
       let issue = res.data.data.repository.issue;
 
-      document.title = `${issue.title} - 个人博客 - 吴胜斌 | leo424y`;
+      document.title = `${issue.title} - 個人部落格 - 張揚翔 | leo424y`;
 
       this.setState({
         title: issue.title,

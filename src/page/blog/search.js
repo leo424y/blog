@@ -24,7 +24,7 @@ class SearchPage extends React.Component {
 
   getIssues(){
     let keyWords = utils.getParameterByName('keyWords');
-    document.title = `${keyWords} - 个人博客 - 吴胜斌 | leo424y`;
+    document.title = `${keyWords} - 個人部落格 - 張揚翔 | leo424y`;
 
     let data = {
       query: `query {
@@ -62,7 +62,7 @@ class SearchPage extends React.Component {
         <div className={s.container}>
           <Header handleSearch={this.handleSearch} />
           { this.state.list.length > 0 ? <PostList list={this.state.list} /> :
-          <div className={s.noPostTips}>没搜到哦 换个词试试～</div>}
+          <div className={s.noPostTips}>沒搜到哦 換個詞試試～</div>}
         </div>
     );
   }
