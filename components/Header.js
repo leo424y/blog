@@ -7,7 +7,7 @@ class Header extends React.Component {
     super();
     this.state = {
       menus:[{
-        name: '首页',
+        name: '首頁',
         url: '/index'
       },{
         name: 'Blog',
