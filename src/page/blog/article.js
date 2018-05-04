@@ -24,7 +24,7 @@ class ArticlePage extends React.Component {
   getIssue(articleId){
     let data = {
       query: `query {
-        repository(owner:"simbawus", name: "blog") {
+        repository(owner:"leo424y", name: "blog") {
           issue(number: ${articleId}) {
             title
             updatedAt
@@ -37,7 +37,7 @@ class ArticlePage extends React.Component {
     Actions.getIssues(data).then((res) => {
       let issue = res.data.data.repository.issue;
 
-      document.title = `${issue.title} - 个人博客 - 吴胜斌 | simbawu`;
+      document.title = `${issue.title} - 个人博客 - 吴胜斌 | leo424y`;
 
       this.setState({
         title: issue.title,

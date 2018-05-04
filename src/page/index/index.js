@@ -9,10 +9,10 @@ class IndexPage extends React.Component {
       chinese: true,
       introduce: {
         welcome: '朋友，你好！',
-        name: '我是吴胜斌',
-        work: '目前在上海担任前端工程师',
-        more: '更多关于我的信息，请见下方。',
-        blog: '博客'
+        name: '我是張揚翔',
+        work: '目前在台灣任工程師',
+        more: '更多關於我的資訊，請見下方。',
+        blog: '部落格'
       }
 		};
 
@@ -38,10 +38,10 @@ class IndexPage extends React.Component {
         chinese: chinese,
         introduce: {
           welcome: '朋友，你好！',
-          name: '我是吴胜斌，',
-          work: '目前在上海从事Web前端开发工作，',
-          more: '更多关于我的信息，请见下方。',
-          blog: '博客'
+          name: '我是張揚翔，',
+          work: '目前在台灣從事開發工作，',
+          more: '更多關於我的資訊，請見下方。',
+          blog: '部落格'
         }
       })
     }else {
@@ -49,8 +49,8 @@ class IndexPage extends React.Component {
         chinese: chinese,
         introduce: {
           welcome: 'Hi Friend,',
-          name: 'I’m Simba Wu.',
-          work: 'A Front End Developer in Shanghai.',
+          name: 'I’m Fly Chang.',
+          work: 'A Web Developer in Shanghai.',
           more: 'More about me at the bottom.',
           blog: 'Blog'
         }
@@ -81,18 +81,12 @@ class IndexPage extends React.Component {
           </div>
           <div className={s.link}>
             <div className={s.icon_link}>
-              <a href="https://github.com/simbawus" target="_blank">
+              <a href="https://github.com/leo424y" target="_blank">
                 <i className={`iconfont ${s.icon_github}`}>&#xe600;</i>
-              </a>
-              <a href="https://www.zhihu.com/people/wusb/activities" target="_blank">
-                <i className={s.icon_zhihu}>知</i>
               </a>
             </div>
             <div className={s.word_link}>
               <Link to='/blog'>Blog</Link>
-              <a href="https://juejin.im/user/59cd9cb8518825745c637de0/activities" target="_blank">掘金</a>
-              <a href="https://www.jianshu.com/u/54986e6d5fa7" target="_blank">简书</a>
-              <a href="https://segmentfault.com/u/simbawu" target="_blank">segmentfault</a>
             </div>
           </div>
 				</div>

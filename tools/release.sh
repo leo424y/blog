@@ -6,4 +6,4 @@
     --exclude '.DS_Store' \
     --exclude 'Runtime' \
     -e 'ssh -p 22' \
-    ./dist/ root@115.28.222.218:/alidata/www/simbawu/simba/blog
+    ./dist/ root@159.65.132.247:/usr/share/nginx/html

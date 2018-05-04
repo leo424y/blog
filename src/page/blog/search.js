@@ -24,11 +24,11 @@ class SearchPage extends React.Component {
 
   getIssues(){
     let keyWords = utils.getParameterByName('keyWords');
-    document.title = `${keyWords} - 个人博客 - 吴胜斌 | simbawu`;
+    document.title = `${keyWords} - 个人博客 - 吴胜斌 | leo424y`;
 
     let data = {
       query: `query {
-        search(query:"${keyWords} repo:simbawus/blog", type: ISSUE, first: 10) {
+        search(query:"${keyWords} repo:leo424y/blog", type: ISSUE, first: 10) {
           issueCount
           edges{
             cursor

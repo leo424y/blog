@@ -1,4 +1,4 @@
-# 个人博客 http://simbawu.com
+# 个人博客 http://leo424y.com
 - 结合GitHub GraphQL API，免费开源、开箱即用；
 - 响应式布局，完美适配不同屏幕尺寸；
 - 全新技术栈，持续更新升级；
@@ -9,7 +9,7 @@
 #### 安装
 
 ```shell
-git clone git@github.com:simbawus/blog.git
+git clone git@github.com:leo424y/blog.git
 cd blog
 yarn
 yarn start
@@ -19,11 +19,11 @@ yarn start
 
 #### 修改
 
-1. 进入**config/githubConfig.js** 修改github access token，如何获取token请查看我这篇文章：[如何利用GitHub GraphQL API开发个人博客？](https://github.com/simbawus/blog/issues/11)。
+1. 进入**config/githubConfig.js** 修改github access token，如何获取token请查看我这篇文章：[如何利用GitHub GraphQL API开发个人博客？](https://github.com/leo424y/blog/issues/11)。
 2. 进入**tools/release.sh**修改你的服务器配置，主要是修改下面这段，别忘了要在你电脑上配置你的服务器的ssh登录哦！
 
 ```shell
-root@115.28.222.218:/alidata/www/simbawu/simba/blog
+root@115.28.222.218:/alidata/www/leo424y/simba/blog
 ```
 
 两步修改即可上线你的个人博客啦！当然，可以进行个性化定制。
@@ -44,7 +44,7 @@ yarn deploy
 - 如果你是设计师，有前沿的设计审美、极致的设计追求，欢迎展现你的美；
 - 如果你是工程师，技术过硬、热衷开源，欢迎跟牛逼的产品和设计一起打造一流的个人博客。
 
-让我们跟大牛们一起，做点不一样的事情。欢迎加我微信：**simbawu610**。
+让我们跟大牛们一起，做点不一样的事情。欢迎加我微信：**leo424y610**。
 
 ## Thanks
 

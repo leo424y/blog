@@ -39,7 +39,7 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount(){
-    document.title = '个人博客 - 吴胜斌 | simbawu';
+    document.title = '個人部落格 - 張揚翔 | leo424y';
     window.addEventListener('scroll', this.handleOnScroll);
     let currentLabel = this.props.match.params.type;
     this.getIssues(currentLabel || 'New');
@@ -56,7 +56,7 @@ class IndexPage extends React.Component {
       label = 'New';
       data = {
         query: `query {
-          repository(owner:"simbawus", name: "blog") {
+          repository(owner:"leo424y", name: "blog") {
             issues(orderBy:{field: UPDATED_AT, direction: DESC} , labels: null, first: 10, after: ${page}) {
               edges{
                 cursor
@@ -79,7 +79,7 @@ class IndexPage extends React.Component {
     }else {
       data = {
         query: `query {
-        repository(owner:"simbawus", name: "blog") {
+        repository(owner:"leo424y", name: "blog") {
           issues(orderBy:{field: UPDATED_AT, direction: DESC} , labels: "${label}", first: 10, after: ${page}) {
             edges{
               cursor
@@ -142,10 +142,10 @@ class IndexPage extends React.Component {
       let touch = e.touches[0];
       this.localState.startX = touch.pageX;
       this.localState.startY = touch.pageY;
-      this.localState.initTab = this.state.currentTab;   //本次滑动前的初始位置
-      this.localState.startT = new Date().getTime(); //记录手指按下的开始时间
-      this.localState.isMove = false; //是否产生滑动
-      this.localState.isTouchEnd = false; //当前开始滑动
+      this.localState.initTab = this.state.currentTab;   //本次滑動前的初始位置
+      this.localState.startT = new Date().getTime(); //記錄手指按下的開始時間
+      this.localState.isMove = false; //是否產生滑動
+      this.localState.isTouchEnd = false; //當前開始滑動
     }
   }
 
@@ -154,36 +154,36 @@ class IndexPage extends React.Component {
     let touch = e.touches[0];
     let deltaX = touch.pageX - this.localState.startX;
     let deltaY = touch.pageY - this.localState.startY;
-    //如果X方向上的位移大于Y方向，则认为是左右滑动
+    //如果X方向上的位移大於Y方向，則認為是左右滑動
     if (Math.abs(deltaX) > Math.abs(deltaY)){
       if ((this.handleLabelIndex(this.state.currentLabel) > 0 && deltaX > 0) || (this.handleLabelIndex(this.state.currentLabel) <= (this.state.labels.length - 2) && deltaX < 0)){
-        //移动页面
+        //移動頁面
         this.handleOpacity(0.2);
         this.localState.isMove = true;
       }
-      this.localState.direction = deltaX > 0 ? "right" : "left"; //判断手指滑动的方向
+      this.localState.direction = deltaX > 0 ? "right" : "left"; //判斷手指滑動的方向
     }
   }
 
   touchEnd(e){
     // e.preventDefault();
-    //计算手指在屏幕上停留的时间
+    //計算手指在螢幕上停留的時間
     let deltaT = new Date().getTime() - this.localState.startT;
     let index = 0;
-    if (this.localState.isMove){ //发生了左右滑动
-      //使用动画过渡让页面滑动到最终的位置
-      if(deltaT < 300){ //如果停留时间小于300ms,则认为是快速滑动，无论滑动距离是多少，都停留到下一页
+    if (this.localState.isMove){ //發生了左右滑動
+      //使用動畫過渡讓頁面滑動到最終的位置
+      if(deltaT < 300){ //如果停留時間小於300ms,則認為是快速滑動，無論滑動距離是多少，都停留到下一頁
         index = this.localState.direction == 'left'? 1 : -1;
 
       }else {
-        //如果滑动距离小于屏幕的50%，则退回到上一页
+        //如果滑動距離小於螢幕的50%，則退回到上一頁
         if (Math.abs(this.localState.moveLength)/this.localState.pageWidth < 0.5){
           translate = this.localState.currentPosition-this.localState.moveLength;
 
           index = 0
 
         }else{
-          //如果滑动距离大于屏幕的50%，则滑动到下一页
+          //如果滑動距離大於螢幕的50%，則滑動到下一頁
           index = this.localState.direction == 'left'? 1 : -1;
         }
       }
